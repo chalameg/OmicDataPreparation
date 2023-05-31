@@ -2,164 +2,146 @@ import "./InnerSidebar.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { AiFillFolder } from "react-icons/ai";
 import React from "react";
-import PropTypes from "prop-types";
-import Collapse from "@mui/material/Collapse";
-import { useSpring, animated } from "@react-spring/web";
 
 import "@mui/lab/TreeItem";
-
-function TransitionComponent(props) {
-  const style = useSpring({
-    from: { opacity: 0, transform: "translate3d(20px,0,0)" },
-    to: {
-      opacity: props.in ? 1 : 0,
-      transform: `translate3d(${props.in ? 0 : 20}px,0,0)`,
-    },
-  });
-
-  return (
-    <animated.div style={style}>
-      <Collapse {...props} />
-    </animated.div>
-  );
-}
-
-TransitionComponent.propTypes = {
-  in: PropTypes.bool,
-};
+import { Box } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
 
 const InnerSidebar = () => {
   return (
-    <div className="leftSidebar">
-      <div class="vl"></div>
-      <div class="v2"></div>
-      <div class="v3"></div>
-      <div class="v4"></div>
-      <h2
-        style={{
-          color: "white",
-          fontStyle: "bold",
-          margin: 15,
-          marginBottom: 5,
-          padding: 20,
-          paddingLeft: 15,
-        }}
+    <Box className="leftSidebar">
+      <h2> Files </h2>
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "active1" : "inactive")}
       >
-        Files
-      </h2>
-      <div className="sidebarWrapper">
-        <div className="bage1">config</div>
-        <div className="omicPrimaryTextColor">dataform</div>
-      </div>
-      <div className="sidebarWrapper">
-        <div className="bage1">config</div>
-        <div className="omicPrimaryTextColor">package-lock</div>
-      </div>
-      <div className="sidebarWrapper">
-        <div className="bage1">config</div>
-        <div className="omicPrimaryTextColor">package</div>
-      </div>
+        <Box className="sidebarWrapper">
+          <Box className="bage1">config</Box>
+          <Box className="omicPrimaryTextColor">dataform</Box>
+        </Box>
+      </NavLink>
 
-      <div className="lists">
-        <div>
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "active1" : "inactive")}
+      >
+        <Box className="sidebarWrapper">
+          <Box className="bage1">config</Box>
+          <Box className="omicPrimaryTextColor">package-lock</Box>
+        </Box>
+      </NavLink>
+
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "active1" : "inactive")}
+      >
+        <Box className="sidebarWrapper">
+          <Box className="bage1">config</Box>
+          <Box className="omicPrimaryTextColor">package</Box>
+        </Box>
+      </NavLink>
+
+      <Box className="lists">
+        <Box>
           {" "}
           <ExpandMoreIcon className="omicPrimaryIconColor" />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <AiFillFolder className="omicPrimaryIconColor" size={25} />
-        </div>
-        <div className="omicPrimaryTextColor"> models</div>
-      </div>
-      <div className="list2">
-        <div>
+        </Box>
+
+        <Box className="omicPrimaryTextColor"> models</Box>
+      </Box>
+      <Box className="list2">
+        <Box>
           {" "}
           <ExpandMoreIcon className="omicPrimaryIconColor" />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <AiFillFolder className="omicPrimaryIconColor" size={25} />
-        </div>
-        <div className="omicPrimaryTextColor"> 1_simple_examples</div>
-      </div>
-      <div
+        </Box>
+        <Box className="omicPrimaryTextColor"> 1_simple_examples</Box>
+      </Box>
+      <Box
         className="sidebarWrapper3"
         style={{ backgroundColor: "#2E3A46", padding: 5, paddingLeft: 0 }}
       >
-        <div className="bage1 bgClass" style={{ backgroundColor: "#8CA261" }}>
+        <Box className="bage1 bgClass" style={{ backgroundColor: "#8CA261" }}>
           SQL
-        </div>
-        <div className="omicPrimaryTextColor">dataset_1</div>
-        <div style={{ color: "#B5BFC7", fontSize: 20, marginTop: -7 }}>
+        </Box>
+        <Box className="omicPrimaryTextColor">dataset_1</Box>
+        <Box style={{ color: "#B5BFC7", fontSize: 20, marginTop: -7 }}>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-        </div>
-      </div>
-      <div className="sidebarWrapper2">
-        <div className="bage1" style={{ backgroundColor: "#8CA261" }}>
+        </Box>
+      </Box>
+      <Box className="sidebarWrapper2">
+        <Box className="bage1" style={{ backgroundColor: "#8CA261" }}>
           SQL
-        </div>
-        <div className="omicPrimaryTextColor">dataset_2_with_ref </div>
-      </div>
-      <div className="list2">
-        <div>
+        </Box>
+        <Box className="omicPrimaryTextColor">dataset_2_with_ref </Box>
+      </Box>
+      <Box className="list2">
+        <Box>
           {" "}
           <ExpandMoreIcon className="omicPrimaryIconColor" />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <AiFillFolder className="omicPrimaryIconColor" size={25} />
-        </div>
-        <div className="omicPrimaryTextColor"> 2_advanced_examples</div>
-      </div>
-      <div className="sidebarWrapper2">
-        <div className="bage1" style={{ backgroundColor: "#8CA261" }}>
+        </Box>
+        <Box className="omicPrimaryTextColor"> 2_advanced_examples</Box>
+      </Box>
+      <Box className="sidebarWrapper2">
+        <Box className="bage1" style={{ backgroundColor: "#8CA261" }}>
           SQL
-        </div>
-        <div className="omicPrimaryTextColor">dataset_3 increa...</div>
-      </div>
-      <div className="sidebarWrapper2">
-        <div
+        </Box>
+        <Box className="omicPrimaryTextColor">dataset_3 increa...</Box>
+      </Box>
+      <Box className="sidebarWrapper2">
+        <Box
           className="bage1"
           style={{ backgroundColor: "#E8D44D", color: "black" }}
         >
           JS
-        </div>
-        <div className="omicPrimaryTextColor">dataset_4_increase...</div>
-      </div>
-      <div className="list2">
-        <div>
+        </Box>
+        <Box className="omicPrimaryTextColor">dataset_4_increase...</Box>
+      </Box>
+      <Box className="list2">
+        <Box>
           {" "}
           <ExpandMoreIcon className="omicPrimaryIconColor" />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <AiFillFolder className="omicPrimaryIconColor" size={25} />
-        </div>
-        <div className="omicPrimaryTextColor"> 3_operations_and_as</div>
-      </div>
-      <div className="sidebarWrapper2">
-        <div className="bage1" style={{ backgroundColor: "#518E9B" }}>
+        </Box>
+        <Box className="omicPrimaryTextColor"> 3_operations_and_as</Box>
+      </Box>
+      <Box className="sidebarWrapper2">
+        <Box className="bage1" style={{ backgroundColor: "#518E9B" }}>
           ops
-        </div>
-        <div className="omicPrimaryTextColor">grant_assess</div>
-      </div>
-      <div className="sidebarWrapper2">
-        <div
+        </Box>
+        <Box className="omicPrimaryTextColor">grant_assess</Box>
+      </Box>
+      <Box className="sidebarWrapper2">
+        <Box
           className="bage1"
           style={{ backgroundColor: "#C48A69", color: "white" }}
         >
           assert
-        </div>
-        <div className="omicPrimaryTextColor">simple_assertion...</div>
-      </div>
+        </Box>
+        <Box className="omicPrimaryTextColor">simple_assertion...</Box>
+      </Box>
 
-      <div className="lists">
-        <div>
+      <Box className="lists">
+        <Box>
           {" "}
           <ExpandMoreIcon className="omicPrimaryIconColor" />
-        </div>
-        <div>
+        </Box>
+        <Box>
           <AiFillFolder className="omicPrimaryIconColor" size={25} />
-        </div>
-        <div style={{ color: "#B5BFC7", marginBottom: 95.3 }}> models_2</div>
-      </div>
-    </div>
+        </Box>
+        <Box style={{ color: "#B5BFC7", marginBottom: 95.3 }}> models_2</Box>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,14 +1,15 @@
-import MainNavigation from '../main-navigation/MainNavigation';
+import { Box, Typography } from '@material-ui/core';
+import MainNavigation from '../header/Header';
 import './PageContent.css';
 
 function PageContent({ title, children }) {
   return (
     <>
     <MainNavigation/>
-    <div className="content">
-      <h1>{title}</h1>
+    <Box className="content">
+      <Typography variant='h1'>{title}</Typography>
       {children}
-    </div>
+    </Box>
     </>
   );
 }

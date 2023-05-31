@@ -12,6 +12,8 @@ import Collapse from "@mui/material/Collapse";
 import { useSpring, animated } from "@react-spring/web";
 import { BsEye } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
+import { Box } from "@material-ui/core";
+import MyTreeView from "../mytreeview/MyTreeView";
 
 function TransitionComponent(props) {
   const style = useSpring({
@@ -53,35 +55,36 @@ const StyledTreeItem = styled((props) => (
 
 const QueryResultsTable = () => {
   return (
-    <div className="omicTable">
-      <div className="headerWrapper">
-        <div className="tableHeader">
-          <div>
+    <Box className="omicTable">
+      <Box className="headerWrapper">
+        <Box className="tableHeader">
+          <Box>
             <RiFileSearchLine />
-          </div>
-          <div>Query results</div>
-        </div>
-        <div className="tableHeader2">
-          <div>
+          </Box>
+          <Box>Query results</Box>
+        </Box>
+        <Box className="tableHeader2">
+          <Box>
             <TbSchema />
-          </div>
-          <div>Schemas</div>
-        </div>
-      </div>
+          </Box>
+          <Box>Schemas</Box>
+        </Box>
+      </Box>
 
-      <div className="tableData">
-        <div className="columnDataWrapper">
-          <div className="leftColumn">
-            <div className="leftColumnHeader">
-              <div className="columnTitle" style={{ marginTop: -5 }}>
+      <Box className="tableData">
+        <Box className="columnDataWrapper">
+          <Box className="leftColumn">
+            <Box className="leftColumnHeader">
+              <Box className="columnTitle" style={{ marginTop: -5 }}>
                 {" "}
                 Refresh
-              </div>
-              <div>
+              </Box>
+              <Box>
                 <MdRefresh style={{ marginTop: 0 }} />
-              </div>
-            </div>
-            <div className="columnData" style={{ display: "block" }}>
+              </Box>
+            </Box>
+            
+            <Box className="columnData" style={{ display: "block" }}>
               <TreeView
                 aria-label="customized"
                 defaultExpanded={[""]}
@@ -96,6 +99,7 @@ const QueryResultsTable = () => {
                   backgroundColor: "#24303C",
                   marginTop: -1,
                 }}
+                style={{textAlign:'left'}}
               >
                 <StyledTreeItem
                   nodeId=""
@@ -137,18 +141,20 @@ const QueryResultsTable = () => {
                   <StyledTreeItem nodeId="10" label="dataset_1" />
                 </StyledTreeItem>
               </TreeView>
-            </div>
-          </div>
-          <div className="rightColumn">
-            <div className="rightColumnHeader">
-              <div className="bage1" style={{ backgroundColor: "#528D99" }}>
+              
+            </Box>
+          </Box>
+
+          <Box className="rightColumn">
+            <Box className="rightColumnHeader">
+              <Box className="bage1" style={{ backgroundColor: "#528D99" }}>
                 view
-              </div>
-              <div className="omicPrimaryTextColor">datfrom_demo.dataset_1</div>
-              <div style={{ color: "#57636F", marginLeft: 530 }}>
+              </Box>
+              <Box className="omicPrimaryTextColor">datfrom_demo.dataset_1</Box>
+              <Box style={{ color: "#57636F", marginLeft: 480 }}>
                 <IoMdClose size={25} />
-              </div>
-            </div>
+              </Box>
+            </Box>
             <table className="myTable custom-table">
               <tbody>
                 <tr>
@@ -177,10 +183,10 @@ const QueryResultsTable = () => {
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

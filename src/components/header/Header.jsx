@@ -9,13 +9,14 @@ import { RxSlider } from "react-icons/rx";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Button from "@material-ui/core/Button";
 
-import "./MainNavigation.css";
+import "./Header.css";
+import { Box } from "@material-ui/core";
 
-const MainNavigation = () => {
+const Header = () => {
   return (
-    <div className="navigationBar">
-      <div className="header">
-        <div
+    <Box className="headerContainer">
+      <Box className="header">
+        <Box
           style={{
             marginLeft: 100,
             display: "flex",
@@ -25,12 +26,12 @@ const MainNavigation = () => {
           }}
         >
           <p style={{ color: "#6E7982" }}>Project Name</p>
-          <div style={{ marginTop: "8px", color: "#727E8A" }}>
+          <Box style={{ marginTop: "8px", color: "#727E8A" }}>
             <ExpandMoreIcon />
-          </div>
-        </div>
+          </Box>
+        </Box>
 
-        <div
+        <Box
           style={{
             display: "flex",
             justifyContent: "center",
@@ -40,7 +41,7 @@ const MainNavigation = () => {
             borderRadius: "10px",
           }}
         >
-          <div
+          <Box
             style={{
               display: "flex",
               justifyContent: "center",
@@ -49,14 +50,14 @@ const MainNavigation = () => {
               padding: "0px 0px 0px 20px",
             }}
           >
-            <div className="secondItem">
+            <Box className="secondItem">
               <p style={{ color: "#9DA4A8", margin: 0 }}>Development</p>
-            </div>
-            <div style={{ marginTop: "8px", color: "#727E8A" }}>
+            </Box>
+            <Box style={{ marginTop: "8px", color: "#727E8A" }}>
               <ExpandMoreIcon />
-            </div>
-          </div>
-          <div
+            </Box>
+          </Box>
+          <Box
             style={{
               color: "#ccc",
               fontSize: "20px",
@@ -75,10 +76,9 @@ const MainNavigation = () => {
             >
               ..
             </span>
-          </div>
-        </div>
+          </Box>
+        </Box>
 
-        <div>
           <Button
             variant="contained"
             color="primary"
@@ -87,21 +87,18 @@ const MainNavigation = () => {
           >
             Commit (2 files)
           </Button>
-        </div>
-      </div>
-      <div className="layout">
-        <div style={{ color: "#6A7682" }}>
-          <RiLayoutLeft2Line size={25} />
-        </div>
-        <div style={{ color: "#6A7682" }}>
-          <RiLayoutBottom2Line size={25} />
-        </div>
-        <div style={{ color: "#6A7682" }}>
-          <RiLayoutRight2Line size={25} />
-        </div>
-      </div>
-    </div>
+        
+      </Box>
+    
+      <Box className="layout">
+        <RiLayoutLeft2Line size={25} color="#6A7682"/>
+        
+        <RiLayoutBottom2Line size={25} color="#6A7682"/>
+      
+        <RiLayoutRight2Line size={25} color="#6A7682"/>
+      </Box>
+    </Box>
   );
 };
 
-export default MainNavigation;
+export default Header;

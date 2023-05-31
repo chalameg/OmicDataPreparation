@@ -6,8 +6,7 @@
     width: 750px;
     background-color: #2E3A46;
     border-right: 0.2px solid rgb(86, 90, 93, .8);
-     /* border: 1px solid rgba(255, 0, 0, .5); */
-
+     text-align: left;
 }
 .editorHeader {
     padding-left:10px;
@@ -17,7 +16,7 @@
 
 }
 .editorSave {
-     background-color:#464849;
+    background-color: #505D6B;
      color:#B5BFC7;
      height: 30px;
      width:55px;

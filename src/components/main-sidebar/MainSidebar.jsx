@@ -15,11 +15,12 @@ import profilePic from "../../assets/profilePic.jpg";
 import logo from "../../assets/logo.jpg";
 import { TbFidgetSpinner } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
+import { Box } from "@material-ui/core";
 
 const MainSidebar = () => {
   return (
-    <div className="iconSidebar">
-      <div className="icons">
+    <Box className="mainSidebar">
+      <Box className="icons">
         <NavLink to="/">
         <img
           src={logo}
@@ -73,7 +74,7 @@ const MainSidebar = () => {
         <hr style={{ color: "#484545", width: 22 }} />
 
         <TbFidgetSpinner
-          style={{ color: "#fff", marginBottom: 22 }}
+          style={{ color: "#fff", margin: '22px  0' }}
           size={25}
         />
         <ImClock
@@ -93,7 +94,7 @@ const MainSidebar = () => {
         />
         <hr style={{ color: "#484545", width: 20 }} />
         <BiChevronRight
-          style={{ marginBottom: 22, marginTop: 20 }}
+          style={{ marginBottom: 6, marginTop: 20 }}
           size={35}
           className="omicPrimaryIconColor"
         />
@@ -103,8 +104,8 @@ const MainSidebar = () => {
           className="omicPrimaryIconColor"
         />
         <Avatar src={profilePic} style={{ marginBottom: 36 }}></Avatar>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

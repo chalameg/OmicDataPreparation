@@ -1,19 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import MainNavigation from "../../components/main-navigation/MainNavigation";
 import MainSidebar from '../../components/main-sidebar/MainSidebar'
 
 import "./RootLayout.css";
+import { Box } from "@material-ui/core";
 
 const RootLayout = () => {
   return (
-    <div className="rootLayout">
-      <MainNavigation />
+    <Box className="rootLayout">
       <MainSidebar />
       <main className="content">
         <Outlet />
       </main>
-    </div>
+    </Box>
   );
 };
 
