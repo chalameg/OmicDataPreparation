@@ -1,0 +1,11 @@
+.content{
+    margin: 0;
+}
+
+.rootLayout{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}

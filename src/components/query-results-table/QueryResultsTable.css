@@ -1,0 +1,90 @@
+.omicTable {
+    position: relative;
+    top:400px;
+    left:380px;
+    width: 1156px;
+    /* height: 300px; */
+    height: auto;
+    background-color: rgb(36,48,60);
+    border-bottom-right-radius: 30px;
+
+}
+.tableHeader {
+    width: 100%;
+    height: 60px;
+    /* border-bottom: 0.2px solid rgb(86, 90, 93, .8); */
+    display: flex;
+    gap:15px;
+    color: #BDC6CF;
+    align-items: center;
+
+}
+.tableHeader2 {
+    width: 100%;
+    height: 60px;
+    /* border-bottom: 0.2px solid rgb(86, 90, 93, .8); */
+    display: flex;
+    gap:15px;
+    color: #fff;
+    align-items: center;
+    margin-left: -800px;
+
+}
+.headerWrapper {
+    display: flex;
+    padding-left: 15px;
+    border-bottom: 0.2px solid rgb(86, 90, 93, .8);
+
+}
+.leftColumn {
+    width: 350px;
+    height: 230px;
+    border-right:0.2px solid rgb(86, 90, 93, .8) ;
+    padding-bottom:10px
+    
+
+
+}
+.leftColumnHeader {
+    color: #BDC6CF;
+    display: flex;
+    gap:15px;
+    padding:15px
+}
+.rightColumn {
+    width:100%;
+    height: 50px;
+    /* border-bottom:0.2px solid rgb(86, 90, 93, .8) ; */
+
+}
+.columnDataWrapper {
+    display: flex;
+    /* gap: 20px; */
+}
+.rightColumnHeader {
+    display: flex;
+    gap:15px;
+    align-items: center;
+    padding-left:15px;
+    margin-top: 11px;
+}
+
+.myTable {
+    background-color: rgb(36,48,60);
+    width:100%;
+    margin-top:10px;
+    color: #BDC6CF;
+    /* margin-left:15px; */
+    margin-bottom: 20px;
+
+}
+
+.custom-table {
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 0.2px solid rgba(64, 67, 69, 0.8) ;
+  padding: 3px;
+}

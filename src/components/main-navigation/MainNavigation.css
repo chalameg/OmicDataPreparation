@@ -1,0 +1,24 @@
+.navigationBar {
+  width: auto;
+  height: 70px;
+  background-color: rgb(36, 48, 60);
+  border-top-right-radius: 30px;
+  margin-left: 70px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: #484545;
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  position: absolute;
+  top: 3.3%;
+  right: 3%;
+}

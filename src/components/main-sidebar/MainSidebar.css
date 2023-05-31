@@ -1,0 +1,33 @@
+.active > * {
+  background-color: #547cd7;
+  color: white;
+}
+
+.inactive > * {
+  background-color: transparent;
+  color: #727e8a;
+}
+
+.iconSidebar {
+  height: auto !important;
+  width: 80px;
+  background-color: rgb(32, 41, 52);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 0.2px solid rgb(86, 90, 93, 0.8);
+  padding: 0;
+}
